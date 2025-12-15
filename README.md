@@ -78,7 +78,7 @@ pip install -r requirements.txt
 
 1. Запуск всех тестов:
 ```bash
-   pytest tests/pytest tests/
+pytest tests/pytest tests/
 ```
 2. Запуск с подробным выводом:
 ```bash
