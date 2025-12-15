@@ -77,15 +77,18 @@ pip install -r requirements.txt
 ### Запуск тестов
 
 1. Запуск всех тестов:
-pytest tests/
-
+```bash
+   pytest tests/pytest tests/
+```
 2. Запуск с подробным выводом:
+```bash
 pytest -v tests/
-
+```
 3. Запуск тестов для конкретного модуля:
+```bash
 pytest tests/test_quadratic.py -v
 pytest tests/test_json_parser.py -v
-
+```
 ## Примеры запроса и ответа
 Входящий запрос
 ```json
