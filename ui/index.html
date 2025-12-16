@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Калькулятор квадратных уравнений</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="calculator">
+            <h1>Решение квадратного уравнения</h1>
+            
+            <!--Уравнение-->
+            <div class="equation">
+                <input type="text" id="a" readonly value="">x² + 
+                <input type="text" id="b" readonly value="">x + 
+                <input type="text" id="c" readonly value=""> = 0
+            </div>
+
+            <!--Клавиатура для ввода занчений "a", "b", "c"-->
+            <div class="keyboard">
+                <!-- Первый ряд цифр -->
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                
+                <!-- Второй ряд цифр -->
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                
+                <!-- Третий ряд цифр -->
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                
+                <!-- Последний ряд с управлением -->
+                <button class="btn minus">-</button>
+                <button class="btn">0</button>
+                <button class="btn clear">C</button>
+                
+                <!-- Кнопки управления -->
+                <button class="btn next">Следующий</button>
+                <button class="btn solve">Решить</button>
+            </div>
+
+            <!--Поле с выводом ответа-->
+            <div id="result"></div>
+        </div>
+
+        <script src="script.js"></script>    
+    </body>
+</html>
