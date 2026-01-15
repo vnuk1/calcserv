@@ -1,6 +1,10 @@
-'''
-Парсер json, выполняющий преобразование данных из json и в json
-'''
+"""
+Модуль обработки и валидации JSON-данных.
+
+Обеспечивает корректную конвертацию входящих HTTP-запросов в объекты Python
+и подготовку вычисленных результатов (включая комплексные числа) для 
+отправки обратно клиенту в формате JSON.
+"""
 import json
 import logging
 
@@ -11,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 
 def parse_request(json_string):
-    '''
+    """
     Парсит запрос из json от клиента.
     
     Пример запроса:
@@ -25,7 +29,7 @@ def parse_request(json_string):
     
     Возвращает:
         (a, b, c) или (None, None, None) при ошибке
-    '''
+    """
     try:
         # Парсим весь json
         data = json.loads(json_string)
@@ -81,7 +85,7 @@ def parse_request(json_string):
 
 
 def create_response(roots, discriminant, error = None):
-    '''
+    """
     Парсит ответ в json для клиента.
 
     Пример ответа:
@@ -93,7 +97,7 @@ def create_response(roots, discriminant, error = None):
         },
         "error": null или "текст ошибки"
     }
-    '''
+    """
     # Автоматически определяем сообщение на основе результатов
     if roots == ["Любое число"]:
         message = "Успех! Бесконечное число решений"
@@ -143,7 +147,9 @@ def create_response(roots, discriminant, error = None):
 
 
 def error_response(error_msg):
-    """Создает простой ответ об ошибке."""
+    """
+    Создает простой ответ об ошибке.
+    """
     return json.dumps({
         "result": {
             "roots": [],

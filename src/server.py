@@ -17,7 +17,9 @@ from json_parser import parse_request, create_response
 class QuadraticHandler(BaseHTTPRequestHandler):
     
     def do_GET(self):
-        """Обработка GET запросов - отдаём HTML, CSS и JS файлы"""
+        """
+        Обработка GET запросов - отдаём HTML, CSS и JS файлы
+        """
         # Определяем, что отправляем в браузер (html css js)
         if self.path == '/':
             filename = 'index.html'
@@ -60,7 +62,9 @@ class QuadraticHandler(BaseHTTPRequestHandler):
     
 
     def do_POST(self):
-        """Обработка POST запросов"""
+        """
+        Обработка POST запросов
+        """
         try:
             if self.path != '/calculate?quadratic':
                 self.send_error(404, "Use POST /calculate?quadratic")
